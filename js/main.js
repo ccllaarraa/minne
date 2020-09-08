@@ -1,21 +1,18 @@
 $(document).ready(function() {
-	// code that was prewritten probably for an arrow
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > 1){  
-			$('.page-title').addClass("sticky");
-		}
-		else{
-			$('.page-title').removeClass("sticky");
-		}
-	});
-
-
     $('.minus').hide();
     $('.captions').hide();
     $(".plus").click(function(){
         $(this).parents().next('.captions ').slideToggle();
         $(this).closest('.project').find('.available').slideToggle();
         $(this).toggleClass('plus minus');
+	});
+	
+
+    $(document).on('click', 'a[href^="#"]', function (e) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 'slow');
     });
 
 });
@@ -71,3 +68,17 @@ function openTab(evt, tabName) {
 	document.getElementById(tabName).style.display = "block";
 	evt.currentTarget.className += " active";
   }
+
+//back to top 
+window.addEventListener("scroll", function() {
+    showArrow();
+});
+
+function showArrow() {
+    var scrollTop = window.pageYOffset;
+    if (scrollTop > 300 ){
+        document.getElementsByClassName('arrow-up')[0].classList.add('reveal')
+        } else if (scrollTop < 1300 ) {
+            document.getElementsByClassName('arrow-up')[0].classList.remove('reveal')
+    }
+}

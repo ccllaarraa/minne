@@ -41,7 +41,6 @@ body {
 a {
     color: #2e2efe;
     text-decoration: none;
-    z-index: 9000;
 }
 .btn:focus,
 .btn.focus {
@@ -70,8 +69,8 @@ button {
 
 
 .minne-menu {
-    margin: 1rem;
-    z-index: 9999;
+    padding: 1rem;
+    z-index: 100;
     position: static;
 }
 
@@ -113,13 +112,14 @@ button {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
+    margin: 20px;
  }
 
  .img-ctn img {
     max-width: 800px;
     display:flex;
     align-self: flex-end;
-    margin: 20px;
+    padding: 10px 0;
  }
  .works, .about, .texts {
      display: flex;
@@ -131,7 +131,12 @@ button {
 from {opacity: 0;}
 to {opacity: 1;}
 }
-
+.left-caption {
+    position: relative;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
 .plus {
 cursor: pointer;
 display: inline-block;
@@ -158,4 +163,52 @@ background-repeat: no-repeat;
 }
 .captions {
     font-size: 12px;
+}
+.arrow-up {
+    position: absolute;
+    width: 3em;
+    right: 0;
+    padding-right: 15px;
+    display: none;
+    z-index: 1000 !important;
+}
+
+  .reveal {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    bottom: 20px;
+    left: 20px;
+    transition: 0.5s ease;
+    transform: rotate(27deg);
+    z-index: 1000 !important;
+  }
+
+  .reveal:hover {
+    transform: scale(1.1, 1.1);
+    z-index: 1000 !important;
+  }
+  .right>section {
+    max-width: 80%;
+}
+
+@media only screen and (max-width: 900px) {
+    .works, .about, .texts {
+        flex-direction: column-reverse;
+    }
+    .right {
+        width: 100%;
+    }
+    .left {
+        width: 90%;
+    }
+    .captions {
+        font-size: 18px;
+    }
+    .img-ctn img {
+    width: 100%;
+    }
+    .right>section {
+        margin: 1rem;
+    }
 }
