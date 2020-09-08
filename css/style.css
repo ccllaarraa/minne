@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "alte_haas_groteskregular";
+    src: url("../assets/altehaasgroteskregular-webfont.woff2") format("woff2"), url("../assets/altehaasgroteskregular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    font-family: "alte_haas_groteskregular", Arial;
+    cursor: default;
+}
+
+ 
+body {
+    color: #2e2efe;
+    background: url(../assets/i4.gif);
+    background-color: #E5E0D1;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-font-feature-settings: "liga" 1, 'tnum' 1;
+    font-feature-settings: "liga" 1, 'tnum' 1;
+    font-variant-numeric: lining-nums tabular-nums;
+}
+a {
+    color: #2e2efe;
+    text-decoration: none;
+    z-index: 9000;
+}
+.btn:focus,
+.btn.focus {
+    box-shadow: none !important
+}
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+button {
+    background-color:transparent;
+    color: #2e2efe;
+    text-decoration: none;
+    font-family: "alte_haas_groteskregular", Arial;
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+    text-align: left;
+}
+#i1 {
+    position: fixed;
+    left: -800px;
+    top: -1210px;
+    z-index: -1;
+}
+
+
+.minne-menu {
+    margin: 1rem;
+    z-index: 9999;
+    position: static;
+}
+
+.minne-menu>ul {
+    margin: 0 0 1rem 0;
+}
+
+.minne-menu>ul>li {
+    list-style: none;
+    position: relative;
+    cursor: default;
+    line-height: 100%;
+    color: #2e2efe;
+    text-decoration: none;
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+}
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+.tab button.active {
+   text-decoration: underline;
+  }
+
+ .left {
+     width: 25%;
+     margin: 1rem;
+     font-size: 18px;
+ } 
+
+ .right {
+     width: 75%
+ }
+ .img-ctn {
+    position: relative;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .img-ctn img {
+    max-width: 800px;
+    display:flex;
+    align-self: flex-end;
+    margin: 20px;
+ }
+ .works, .about, .texts {
+     display: flex;
+ }
+
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+
+.plus {
+cursor: pointer;
+display: inline-block;
+width: 18px;
+height: 18px;
+background: linear-gradient(#2e2efe, #2e2efe), linear-gradient(#2e2efe, #2e2efe), transparent;
+background-position: center;
+background-size: 100% 0.7px,0.7px 100%;
+background-repeat: no-repeat;
+}
+
+.minus {
+cursor: pointer;
+display: inline-block;
+width: 18px;
+height: 18px;
+background: linear-gradient(#2e2efe, #2e2efe), linear-gradient(#2e2efe, #2e2efe), transparent;
+background-position: center;
+background-size: 100% 0.7px;
+background-repeat: no-repeat;
+}
+.captions-switch {
+    margin: 30px 0;
+}
+.captions {
+    font-size: 12px;
+}
